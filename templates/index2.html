@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+   <head>
+      <title>{{ title }}</title>
+      <link rel="stylesheet" href="../static/style.css/">
+   </head>
+   <body>
+
+      <h1>Olá, Colegas da disciplina EEL_7801! </h1>
+      <br>
+      <h2>{{ title1 }}</h2>
+      <br>
+      <h3>Estas são data|hora neste servidor: {{ time }}</h3>
+      
+      <br> 
+      
+      <h2> Sinais dos Botões: </h2>
+      <br>
+      
+      <h3> Button 1 Pressed: {{ button1 }}</h3>
+      <h3> Button 2 Pressed: {{ button2 }}</h3>
+      <br> 
+      
+      <h2>Sinais dos Leds: </h2>
+      
+      <br>
+      
+      <h4> RED LED ==>  {{ ledRed  }} </h4>
+      <h4> YLW LED ==>  {{ ledYlw  }} </h4>
+      <h4> GRN LED ==>  {{ ledGrn  }} </h4>
+      <br>
+      
+      <h2> Comandos e Status de sinal dos Leds </h2>
+      
+      <br>
+      
+      <h3> 
+         LED VERMELHO ==>  {{ ledRed  }}  ==>   
+			{% if  ledRed   == 1 %} 
+				<a href="/ledRed/off"class="button">TURN OFF</a> 
+			{% else %} 
+				<a href="/ledRed/on" class="button">TURN ON</a>  
+			{% endif %}	
+            </h3>
+        <h3>
+         LED VERDE ==>  {{ ledGrn  }}  ==>   
+			{% if  ledGrn   == 1 %} 
+				<a href="/ledGrn/off"class="button">TURN OFF</a> 
+			{% else %} 
+				<a href="/ledGrn/on" class="button">TURN ON</a>  
+			{% endif %}
+            </h3>   
+         <h3>      
+         LED AMARELO ==>  {{ ledYlw  }}  ==>   
+			{% if  ledYlw   == 1 %} 
+				<a href="/ledYlw/off"class="button">TURN OFF</a> 
+			{% else %} 
+				<a href="/ledYlw/on" class="button">TURN ON</a>  
+			{% endif %}
+            </h3>
+   </body>
+</html>
+

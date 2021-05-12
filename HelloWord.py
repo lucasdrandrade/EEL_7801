@@ -1,6 +1,6 @@
 from flask import Flask #import the flask module 
 
-app = Flask(__name__) #crate a flask object called
+app = Flask(__name__) #create a flask object called app
 
 #Run the index() function when someone accesses the root URL ('/') of the server. In this case, only send the text "Hello World!" to the client's web browser thru "return"
 
